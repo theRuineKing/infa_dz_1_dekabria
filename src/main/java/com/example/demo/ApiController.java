@@ -41,7 +41,9 @@ public class ApiController {
         return ResponseEntity.noContent().build();
     }
 
-    //
+    //curl --location --request PUT 'localhost:8081/messages/0' \
+    //--header 'Content-Type: text/plain' \
+    //--data 'abobus'
     @PutMapping("messages/{index}")
     public ResponseEntity<Void> updateMessage(
             @PathVariable("index") Integer i,
